@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	h1= title
+	#content
+		p #{pagetitle}
+		p The teams in Group #{group} for Euro 2012 are:
+		ul
+			each team in teams
+				li #{team.country}

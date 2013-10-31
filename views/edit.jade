@@ -1,0 +1,24 @@
+extends layout
+
+block content
+	h1= title
+	#content
+		form(method="post", action="/edit")
+			p #{pagetitle}
+			if (user != null)
+				p
+					label Name: 
+					input(type="text", name="userName" value='#{user.userName}')
+				p
+					label Login: 
+					input(type="text", name="login"  value='#{user.login}')
+				p
+					label Email: 
+					input(type="text", name="email"  value='#{user.email}')
+				p
+					input(type="hidden", name="userId"  value='#{user._id}')
+				p 
+					input(type="submit", value="Save")
+			else
+				label User Not Found
+
