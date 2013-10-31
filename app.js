@@ -8,6 +8,7 @@ var db = require('./model/db');
 var routes = require('./routes');
 var user = require('./routes/user');
 var find = require('./routes/find');
+var edit = require('./routes/edit');
 var http = require('http');
 var path = require('path');
 
@@ -33,7 +34,12 @@ app.get('/', routes.index);
 
 // Execute the userlist function in the route folder, user.js file.
 app.get('/users', user.userlist);
+
+// Will be doing both gets and posts to find page 
 app.get('/find', find.searchresults);
+app.post('/find', find.searchresults);
+app.get('/edit', edit.getrecord);
+app.post('/edit', edit.getrecord);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
