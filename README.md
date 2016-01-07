@@ -13,14 +13,14 @@ From cmd line...
 
 ### Start mongo
 From cmd line...
-- => mongod
+`=> mongod1
 
 ### Create Database
 From cmd line...
-- => mongo
+`=> mongo`
 
-- > use dbname
-- swtiched to db dbname
+`> use dbname`
+swtiched to db dbname
 
 - > db
 - dbname
@@ -32,7 +32,7 @@ From cmd line...
 - > load ('/Users/username/app-name/db-scripts/create-users.js')
 
 ### Sample script
-```db = db.getSiblingDB('dbname');
+db = db.getSiblingDB('dbname');
 
 db.users.save({userName: "John Doe", login: "jdoe", email: "jdoe@me.com"});
-db.users.save({userName: "Jane Doe", login: "jndoe", email: "jndoe@me.com"});```
+db.users.save({userName: "Jane Doe", login: "jndoe", email: "jndoe@me.com"});
