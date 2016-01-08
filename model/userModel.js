@@ -85,17 +85,3 @@ exports.saveUserById = function saveUserById(userData, callback){
 		}
 		
 	});
-
-	// User.find({_id: id}, function(err, users){
-	// 	if (err){
-	// 		console.log(err);
-	// 	}
-	// 	else{
-	// 		console.log(users);
-	// 		if (users == null)
-	// 			callback("",users);
-	// 		else
-	// 			callback("", users[0]);
-	// 	}
-	// }) // End User.find
-} //End exports.userlist
