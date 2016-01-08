@@ -13,29 +13,35 @@ From cmd line...
 
 ### Start mongo
 From cmd line...  
-`=> mongod1'  
+`=> mongod'  
 
 ### Create Database
 From cmd line...  
 `=> mongo`  
 
 `> use dbname`  
-swtiched to db dbname  
+`swtiched to db dbname`  
 
-> db  
-dbname  
+`> db`  
+`dbname`  
 
-> show dbs  
+`> show dbs`
+`db1`   
+`db2`  
+`db3`  
 
 ### Load collections from a script
 From mongo cmd line...  
-> load ('/Users/username/app-name/db-scripts/create-users.js')  
+`> load ('/Users/username/app-name/db-scripts/create-users.js')`  
 
 ### Sample script
 db = db.getSiblingDB('dbname');  
 
 db.users.save({userName: "John Doe", login: "jdoe", email: "jdoe@me.com"});  
 db.users.save({userName: "Jane Doe", login: "jndoe", email: "jndoe@me.com"});  
+
+## Set up directory structure  
+to do  
 
 ### Notes
 - If testing rest api in postman, for POST and PUT, set request header as follows or data will not show up in request body  
