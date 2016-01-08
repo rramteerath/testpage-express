@@ -1,7 +1,7 @@
 # MEAN Sample App
 
 ## Mongo Setup
-### Install mondodb
+### Install mongodb (osx)
 - brew update
 - brew install mongo
 
@@ -40,3 +40,6 @@ db.users.save({userName: "Jane Doe", login: "jndoe", email: "jndoe@me.com"});
 ### Notes
 - If testing rest api in postman, for POST and PUT, set request header as follows or data will not show up in request body  
 -- Content-Type: application/json
+- Updated project structure to add controllers. So the dialogue will be  
+  Route -> Controller -> Model -> DB  
+  

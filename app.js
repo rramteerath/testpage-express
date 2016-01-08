@@ -6,8 +6,7 @@
 var express = require('express');
 var db = require('./model/db');
 var routes = require('./routes');
-var user = require('./routes/user');
-var user2 = require('./routes/user2');
+var userRoute = require('./routes/userRoute');
 var find = require('./routes/find');
 var edit = require('./routes/edit');
 var birds = require('./routes/birds');
@@ -54,7 +53,7 @@ router.use(function(req, res, next) {
 
 app.use('/api/birds', birds);
 app.use('/api/birds2', birds2);
-app.use('/api/user2', user2);
+app.use('/api/users', userRoute);
 
 
 // router.get('/users', user.userlist);

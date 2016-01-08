@@ -4,11 +4,13 @@
  */
 
 // User route
+// Routes are responsible for getting the request to the correct controller
 
 var express = require('express');
 var mongoose = require('mongoose');
 var router = express.Router();
-var userdata = require('../model/users');
+var userdata = require('../model/userModel');
+var userCtrl = require('../controllers/userController')
 
 // middleware that is specific to this router
 router.use(function timeLog(req, res, next) {
@@ -18,10 +20,14 @@ router.use(function timeLog(req, res, next) {
 
 // get all users
 router.get('/', function(req, res) {
-  userdata.userlist(function(err, userlist){
-		res.json({ users: userlist });
-	});
+	userCtrl.getAllUsers(req, res);
 });
+
+// router.get('/', function(req, res) {
+//   userdata.userlist(function(err, userlist){
+// 		res.json({ users: userlist });
+// 	});
+// });
 
 // find user by username
 router.route('/:username')
@@ -47,10 +53,10 @@ router.route('/:username')
 		User.login = req.body.login;
 		User.email = req.body.email;
 
-		console.log(req.body);
-		console.log(User.userName);
-		console.log(User.login);
-		console.log(User.email);
+		// console.log(req.body);
+		// console.log(User.userName);
+		// console.log(User.login);
+		// console.log(User.email);
 
 		//Save to db
 		userdata.saveUserById(User, function(err, user){

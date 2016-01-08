@@ -5,7 +5,7 @@
 
 // Edit route
 
-var userdata = require('../model/users');
+var userdata = require('../model/userModel');
 var mongoose = require('mongoose');
 
 exports.getrecord = function(req, res){

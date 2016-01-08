@@ -5,7 +5,7 @@
 
 // Find route
 
-var userdata = require('../model/users');
+var userdata = require('../model/userModel');
 
 exports.searchresults = function(req, res){
 

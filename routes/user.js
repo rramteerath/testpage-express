@@ -5,7 +5,7 @@
 
 // User route
 
-var userdata = require('../model/users');
+var userdata = require('../model/userModel');
 
 exports.userlist = function(req, res){
 	// Call the userlist function in the user model and pass it a function
