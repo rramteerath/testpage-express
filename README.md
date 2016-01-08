@@ -25,7 +25,7 @@ From cmd line...
 `> db`  
 `dbname`  
 
-`> show dbs`
+`> show dbs`  
 `db1`   
 `db2`  
 `db3`  
