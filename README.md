@@ -36,3 +36,7 @@ db = db.getSiblingDB('dbname');
 
 db.users.save({userName: "John Doe", login: "jdoe", email: "jdoe@me.com"});  
 db.users.save({userName: "Jane Doe", login: "jndoe", email: "jndoe@me.com"});  
+
+### Notes
+- If testing rest api in postman, for POST and PUT, set request header
+-- Content-Type: application/json
